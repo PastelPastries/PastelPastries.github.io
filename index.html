@@ -2,90 +2,121 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pastel Pastries - Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pastel Pastries</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
-      font-family: Arial, sans-serif;
-      background: #fff8f0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff1f7;
       margin: 0;
       padding: 0;
-      color: #333;
+      color: #4a2c2a;
     }
     header {
-      background: #f7c6c7;
-      padding: 1.5rem;
+      background-color: #ffc8dd;
+      padding: 20px;
       text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      color: #8b3a3a;
     }
     nav {
-      background: #ffd6d7;
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
-      gap: 1.2rem;
-      padding: 1rem 0;
-      font-weight: bold;
+      margin-top: 10px;
     }
     nav a {
-      color: #8b3a3a;
+      margin: 5px 10px;
       text-decoration: none;
-      font-size: 1.1rem;
+      color: white;
+      font-weight: bold;
+      background-color: #ff5e78;
+      padding: 8px 12px;
+      border-radius: 8px;
     }
     nav a:hover {
-      text-decoration: underline;
+      background-color: #e64e68;
     }
     main {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
+      padding: 30px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h1 {
       text-align: center;
+      color: #ff5e78;
+      font-size: 2.2em;
     }
-    main h2 {
-      color: #b24f4f;
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
     }
-    main p {
-      font-size: 1.2rem;
-      line-height: 1.5;
-      margin-bottom: 2rem;
+    .card {
+      background-color: #ffe4ee;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
     }
-    footer {
-      background: #f7c6c7;
-      text-align: center;
-      padding: 1rem;
-      color: #5c2f2f;
-      font-size: 0.9rem;
-      margin-top: 3rem;
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card h2 {
+      margin-top: 0;
+      color: #d94e63;
+    }
+    .card p {
+      font-size: 1em;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.7em;
+      }
+      nav a {
+        font-size: 0.9em;
+        padding: 6px 10px;
+      }
+      .card {
+        padding: 16px;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Pastel Pastries</h1>
+    <h2>Pastel Pastries</h2>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="menu.html">Menu</a>
+      <a href="events.html">Events</a>
+      <a href="impact.html">Impact</a>
+      <a href="gallery.html">Gallery</a>
+    </nav>
   </header>
-  <nav>
-    <a href="about.html">About / Our Mission</a>
-    <a href="contact.html">Contact</a>
-    <a href="menu.html">Menu</a>
-    <a href="events.html">Upcoming Events</a>
-    <a href="impact.html">Impact / Success</a>
-    <a href="gallery.html">Gallery</a>
-  </nav>
+
   <main>
-    <h2>Welcome to Pastel Pastries!</h2>
-    <p>
-      We're a youth-led nonprofit turning homemade baked goods into real change. 
-      What started as a small fundraiser has grown into an ongoing effort— thanks to the incredible support of our community. 
-      Every order supports causes we care about, one sweet treat at a time.
-    </p>
-    <p>
-      Explore our menu, learn about our mission, check out upcoming events, and see the impact we're making in our community.
-    </p>
+    <h1>Sweet Treats for a Sweeter Cause</h1>
+    <div class="grid">
+      <div class="card">
+        <h2>Our Mission</h2>
+        <p>We bake to bring joy, build community, and make a difference. Proceeds go to supporting those in need through causes we believe in.</p>
+      </div>
+      <div class="card">
+        <h2>Events</h2>
+        <p>Catch us at local farmer’s markets and charity events! Stay updated on where we’ll be next.</p>
+      </div>
+      <div class="card">
+        <h2>Get Involved</h2>
+        <p>We’re always looking for volunteers, supporters, and ideas! Reach out through our contact page to learn more.</p>
+      </div>
+    </div>
   </main>
-  <footer>
-    &copy; 2025 Pastel Pastries. All rights reserved.
-  </footer>
 </body>
 </html>
