@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Menu – Pastel Pastries</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff9db; /* Pastel yellow */
+      margin: 0;
+      padding: 0;
+      color: #4a2c2a;
+    }
+
+    header {
+      background-color: #ffc8dd;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    nav a {
+      margin: 5px 10px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      background-color: #ff5e78;
+      padding: 8px 12px;
+      border-radius: 8px;
+    }
+
+    nav a:hover {
+      background-color: #e64e68;
+    }
+
+    main {
+      padding: 30px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: #ff5e78;
+      font-size: 2.2em;
+      margin-bottom: 30px;
+    }
+
+    .menu-section {
+      margin-bottom: 40px;
+    }
+
+    .menu-section h2 {
+      color: #d94e63;
+      border-bottom: 2px solid #ffd6a5;
+      padding-bottom: 6px;
+    }
+
+    .menu-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px dashed #f3c3c3;
+    }
+
+    .item-name {
+      font-weight: bold;
+    }
+
+    .item-price {
+      color: #7b4c4c;
+      font-style: italic;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.7em;
+      }
+
+      nav a {
+        font-size: 0.9em;
+        padding: 6px 10px;
+      }
+
+      .menu-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>Pastel Pastries</h2>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="events.html">Events</a>
+      <a href="impact.html">Impact</a>
+      <a href="gallery.html">Photo Gallery!</a>
+      <a href="menu.html">Menu</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Our Delicious Menu</h1>
+
+    <div class="menu-section">
+      <h2>Cupcakes</h2>
+      <div class="menu-item">
+        <p class="item-name">Eggless Vanilla Cupcake (Set of 12)</p>
+        <p class="item-price">$35.00</p>
+      </div>
+      <div class="menu-item">
+        <p class="item-name">Eggless Chocolate Cupcakes (Set of 12)</p>
+        <p class="item-price">$35.00</p>
+      </div>
+    </div>
+
+    <div class="menu-section">
+      <h2>Cookies</h2>
+      <div class="menu-item">
+        <p class="item-name">Lemon Cookies (6-pack)</p>
+        <p class="item-price">$15.00</p>
+      </div>
+      <div class="menu-item">
+        <p class="item-name">Eggless White Chocolate Chip Chocolate Cookies(6-pack)</p>
+        <p class="item-price">$16.00</p>
+      </div>
+    </div>
+
+    <div class="menu-section">
+      <h2>Other Treats</h2>
+      <div class="menu-item">
+        <p class="item-name">Eggless Brownies(Set of 6)</p>
+        <p class="item-price">$18.00</p>
+      </div>
+      <div class="menu-item">
+        <p class="item-name">Brownies (Set of 6)/p>
+        <p class="item-price">$17.00</p>
+      </div>
+        <div class="menu-item">
+        <p class="item-name">Cake-pops (Set of 6)</p>
+        <p class="item-price">$20.00</p>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
