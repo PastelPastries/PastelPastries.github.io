@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Pastel Pastries</title>
   <style>
     body {
@@ -10,12 +10,22 @@
       font-family: "Segoe UI", sans-serif;
       background-color: #fffafc;
       color: #333;
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .container {
+      max-width: 900px;
+      width: 100%;
     }
 
     header {
       background-color: #ffe5ec;
       text-align: center;
       padding: 2rem 1rem;
+      border-radius: 16px;
     }
 
     header h1 {
@@ -36,8 +46,6 @@
       flex-direction: column;
       gap: 2rem;
       padding: 2rem 1rem;
-      max-width: 900px;
-      margin: 0 auto;
     }
 
     .box {
@@ -46,12 +54,15 @@
       box-shadow: 0 0 12px rgba(0,0,0,0.1);
       padding: 1.5rem;
       text-align: center;
+      width: 100%;
     }
 
     .box img {
       max-width: 100%;
       border-radius: 12px;
       margin-top: 1rem;
+      height: auto;
+      object-fit: cover;
     }
 
     .box a {
@@ -83,42 +94,42 @@
   </style>
 </head>
 <body>
+  <div class="container">
+    <header>
+      <h1>Pastel Pastries</h1>
+    </header>
 
-  <header>
-    <h1>Pastel Pastries</h1>
-  </header>
+    <section class="intro">
+      <h2>Welcome!</h2>
+      <p>
+        We're a youth-led nonprofit turning homemade baked goods into real change.
+        What started as a small fundraiser has grown into an ongoing effort—thanks to the incredible support of our community.
+        Every order supports causes we care about, one sweet treat at a time.
+      </p>
+    </section>
 
-  <section class="intro">
-    <h2>Welcome!</h2>
-    <p>
-      We're a youth-led nonprofit turning homemade baked goods into real change.
-      What started as a small fundraiser has grown into an ongoing effort—thanks to the incredible support of our community.
-      Every order supports causes we care about, one sweet treat at a time.
-    </p>
-  </section>
+    <section class="boxes">
 
-  <section class="boxes">
+      <div class="box">
+        <h3>Our Mission</h3>
+        <p>At Pastel Pastries, we believe in the power of youth, kindness, and cookies. We're here to help people in sweet ways.</p>
+        <a href="about.html">Learn More</a>
+      </div>
 
-    <div class="box">
-      <h3>Our Mission</h3>
-      <p>At Pastel Pastries, we believe in the power of youth, kindness, and cookies. We're here to help people in sweet ways.</p>
-      <a href="about.html">Learn More</a>
-    </div>
+      <div class="box">
+        <h3>Fan Favorite</h3>
+        <p>Our best-selling eggless cupcakes! You can't even tell they're eggless 🍰</p>
+        <img src="images/Cupcakes.jpg" alt="Eggless Cupcakes" />
+      </div>
 
-    <div class="box">
-      <h3>Fan Favorite</h3>
-      <p>Our best-selling eggless cupcakes! You can't even tell they're eggless 🍰</p>
-      <img src="images/Cupcakes.jpg" alt="Eggless Cupcakes">
-    </div>
+      <div class="box">
+        <h3>This Is Us!</h3>
+        <p>Meet the sweet team behind the sweets :)</p>
+        <img src="images/Creators.jpg" alt="Founders of Pastel Pastries" />
+        <a href="about.html">About Us</a>
+      </div>
 
-    <div class="box">
-      <h3>This Is Us!</h3>
-      <p>Meet the sweet team behind the sweets :)</p>
-      <img src="images/Creators.jpg" alt="Founders of Pastel Pastries">
-      <a href="about.html">About Us</a>
-    </div>
-
-  </section>
-
+    </section>
+  </div>
 </body>
 </html>
