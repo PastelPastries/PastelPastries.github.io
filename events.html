@@ -4,10 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Events – Pastel Pastries</title>
+
   <style>
     * {
       box-sizing: border-box;
     }
+
     body {
       font-family: 'Segoe UI', sans-serif;
       background-color: #fff1f7;
@@ -15,17 +17,20 @@
       padding: 0;
       color: #4a2c2a;
     }
+
     header {
       background-color: #ffc8dd;
       padding: 20px;
       text-align: center;
     }
+
     nav {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       margin-top: 10px;
     }
+
     nav a {
       margin: 5px 10px;
       text-decoration: none;
@@ -34,15 +39,19 @@
       background-color: #ff5e78;
       padding: 8px 12px;
       border-radius: 8px;
+      transition: 0.2s;
     }
+
     nav a:hover {
       background-color: #e64e68;
     }
+
     main {
       padding: 30px 20px;
-      max-width: 800px;
+      max-width: 850px;
       margin: auto;
     }
+
     h1 {
       text-align: center;
       color: #ff5e78;
@@ -56,10 +65,11 @@
       padding: 15px;
       margin: 20px auto;
       border-radius: 12px;
-      font-size: 1.5em;
+      font-size: 1.4em;
       color: #d94e63;
       box-shadow: 0 0 10px rgba(0,0,0,0.05);
       max-width: 500px;
+      font-weight: bold;
     }
 
     .event-details {
@@ -67,7 +77,7 @@
       padding: 25px;
       border-radius: 12px;
       box-shadow: 0 0 10px rgba(0,0,0,0.05);
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
     .event-details p {
@@ -75,27 +85,42 @@
     }
 
     .highlight {
-      font-weight: bold;
       color: #d94e63;
+      font-weight: bold;
+    }
+
+    .info-box {
+      background-color: #fff1f7;
+      border-left: 5px solid #ff5e78;
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 20px;
     }
 
     @media (max-width: 600px) {
+
       h1 {
         font-size: 1.7em;
       }
+
       nav a {
         font-size: 0.9em;
         padding: 6px 10px;
       }
-      .event-details, #countdown {
+
+      .event-details,
+      #countdown {
         padding: 20px;
       }
     }
   </style>
 </head>
+
 <body>
+
   <header>
     <h2>Pastel Pastries</h2>
+
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About Us</a>
@@ -108,33 +133,68 @@
   </header>
 
   <main>
+
     <h1>Upcoming Events</h1>
 
-    <div id="countdown">Countdown loading...</div>
+    <div id="countdown">
+      Countdown loading...
+    </div>
 
     <div class="event-details">
-      <p>We're so excited to announce that we'll be at <span class="highlight">Festival of India</span> this year, taking place at the <strong>Greater Richmond Convention Center</strong> (<span class="highlight">403 N 3rd St, Richmond, VA 23219</span>) from <strong>September 13th to September 14th</strong>!</p>
 
-      <p>Come visit our booth on <strong>Saturday, September 13th from 11 AM to 9 PM</strong> and <strong>Sunday, September 14th from 11 AM to 8 PM</strong> to say hello and enjoy some of our delicious baked goods.</p>
+      <p>
+        We’re so excited to announce that Pastel Pastries will be attending
+        <span class="highlight">RivahFest 2026</span> in downtown Tappahannock!
+      </p>
 
-      <p>We're even bringing some <span class="highlight">special treats</span> that you won’t find on our regular menu, so you won’t want to miss out!</p>
+      <p>
+        RivahFest is a community festival filled with live music, local vendors,
+        food, family activities, shopping, and entertainment along Prince Street
+        and the riverfront.
+      </p>
 
-      <p>We can’t wait to see you there!</p>
+      <p>
+        Come visit our booth on
+        <span class="highlight">May 23, 2026</span>
+        from
+        <span class="highlight">11:00 AM – 8:00 PM</span>
+        to grab some sweet treats and say hello!
+      </p>
+
+      <div class="info-box">
+        📍 <strong>Location:</strong><br>
+        Downtown Tappahannock<br>
+        Prince Street<br>
+        Tappahannock, VA 22560
+      </div>
+
+      <p>
+        We’ll be bringing cupcakes, cookies, brownies,
+        and some special festival treats you won’t want to miss 🍪🧁
+      </p>
+
+      <p>
+        We can’t wait to be part of RivahFest’s return and meet everyone there!
+      </p>
+
     </div>
+
   </main>
 
   <script>
-    // Set event start time: May 31, 2026 at 11:00 AM
-    const eventDate = new Date("September 13, 2025 11:00:00").getTime();
+
+    // Event date
+    const eventDate = new Date("May 23, 2026 11:00:00").getTime();
 
     const countdownElement = document.getElementById("countdown");
 
-    const updateCountdown = () => {
+    function updateCountdown() {
+
       const now = new Date().getTime();
       const distance = eventDate - now;
 
       if (distance <= 0) {
-        countdownElement.textContent = "🎉 The event has started!";
+        countdownElement.textContent = "🎉 RivahFest is happening now!";
         return;
       }
 
@@ -143,19 +203,15 @@
       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-      countdownElement.textContent = `⏳ ${days}d ${hours}h ${minutes}m ${seconds}s until Festival of India!`;
-    };
+      countdownElement.textContent =
+        `⏳ ${days}d ${hours}h ${minutes}m ${seconds}s until RivahFest!`;
+    }
 
-    updateCountdown(); // Initial run
-    setInterval(updateCountdown, 1000); // Update every second
+    updateCountdown();
+
+    setInterval(updateCountdown, 1000);
+
   </script>
+
 </body>
 </html>
-
-
-
-
-
-
-
-
