@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Photo Gallery – Pastel Pastries</title>
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff1f7;
+      margin: 0;
+      padding: 0;
+      color: #4a2c2a;
+    }
+
+    header {
+      background-color: #ffc8dd;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    nav a {
+      margin: 5px 10px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      background-color: #ff5e78;
+      padding: 8px 12px;
+      border-radius: 8px;
+      transition: 0.2s;
+    }
+
+    nav a:hover {
+      background-color: #e64e68;
+    }
+
+    main {
+      padding: 30px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: #ff5e78;
+      font-size: 2.2em;
+      margin-bottom: 20px;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 1.05em;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.08);
+      transition: transform 0.2s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+    }
+
+    @media (max-width: 600px) {
+
+      h1 {
+        font-size: 1.7em;
+      }
+
+      nav a {
+        font-size: 0.9em;
+        padding: 6px 10px;
+      }
+
+      .gallery img {
+        height: 200px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <header>
+
+    <h2>Pastel Pastries</h2>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="events.html">Events</a>
+      <a href="impact.html">Impact</a>
+      <a href="gallery.html">Photo Gallery!</a>
+      <a href="menu.html">Menu</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+
+  </header>
+
+  <main>
+
+    <h1>Photo Gallery</h1>
+
+    <div class="intro">
+      A few of our favorite bakes (and behind-the-scenes moments)
+    </div>
+
+    <div class="gallery">
+
+      <img src="images/cupcakes.jpg" alt="Cupcakes">
+      <img src="images/cookies.jpg" alt="Cookies">
+      <img src="images/frosting.jpg" alt="Frosting process">
+      <img src="images/heart.jpg" alt="Heart shaped design">
+      <img src="images/closed.jpg" alt="Bakery items boxed up">
+
+    </div>
+
+  </main>
+
+</body>
+</html>
