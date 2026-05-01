@@ -40,11 +40,6 @@
       background-color: #ff5e78;
       padding: 8px 12px;
       border-radius: 8px;
-      transition: 0.2s;
-    }
-
-    nav a:hover {
-      background-color: #e64e68;
     }
 
     main {
@@ -57,7 +52,7 @@
       text-align: center;
       color: #ff5e78;
       font-size: 2.2em;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
 
     .intro {
@@ -72,17 +67,32 @@
       gap: 15px;
     }
 
-    .gallery img {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
+    .card {
+      background-color: #ffe4ee;
       border-radius: 12px;
+      overflow: hidden;
       box-shadow: 0 0 10px rgba(0,0,0,0.08);
-      transition: transform 0.2s;
     }
 
-    .gallery img:hover {
-      transform: scale(1.03);
+    .card img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card p {
+      padding: 12px;
+      margin: 0;
+      font-size: 0.95em;
+      line-height: 1.4;
+    }
+
+    .title {
+      font-weight: bold;
+      color: #d94e63;
+      display: block;
+      margin-bottom: 4px;
     }
 
     @media (max-width: 600px) {
@@ -94,10 +104,6 @@
       nav a {
         font-size: 0.9em;
         padding: 6px 10px;
-      }
-
-      .gallery img {
-        height: 200px;
       }
 
     }
@@ -128,16 +134,42 @@
     <h1>Photo Gallery</h1>
 
     <div class="intro">
-      A few of our favorite bakes (and behind-the-scenes moments)
+      A few of our favorite bakes and custom creations
     </div>
 
     <div class="gallery">
 
-      <img src="images/cupcakes.jpg" alt="Cupcakes">
-      <img src="images/cookies.jpg" alt="Cookies">
-      <img src="images/frosting.jpg" alt="Frosting process">
-      <img src="images/heart.jpg" alt="Heart shaped design">
-      <img src="images/closed.jpg" alt="Bakery items boxed up">
+      <div class="card">
+        <img src="images/cupcakes.jpg" alt="Cupcakes">
+        <p>
+          <span class="title">Cupcakes</span>
+          Our signature eggless cupcakes, baked fresh in small batches.
+        </p>
+      </div>
+
+      <div class="card">
+        <img src="images/heart.jpg" alt="Heart shaped cake">
+        <p>
+          <span class="title">Heart Cake</span>
+          A custom heart-shaped cake made for a special order.
+        </p>
+      </div>
+
+      <div class="card">
+        <img src="images/frosting.jpg" alt="Frosted mini cupcakes">
+        <p>
+          <span class="title">Frosting Details</span>
+          Mini cupcakes with detailed frosting, carefully decorated by Jayashree.
+        </p>
+      </div>
+
+      <div class="card">
+        <img src="images/cookies.jpg" alt="Decorated cookies">
+        <p>
+          <span class="title">Custom Cookies</span>
+          Eggless chocolate chip cookies with colorful sweets instead of chocolate chips.
+        </p>
+      </div>
 
     </div>
 
