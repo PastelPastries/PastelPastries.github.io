@@ -4,14 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Menu – Pastel Pastries</title>
+
   <style>
+
     * {
       box-sizing: border-box;
     }
 
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #fff9db; /* Pastel yellow */
+      background-color: #fff9db;
       margin: 0;
       padding: 0;
       color: #4a2c2a;
@@ -38,6 +40,7 @@
       background-color: #ff5e78;
       padding: 8px 12px;
       border-radius: 8px;
+      transition: 0.2s;
     }
 
     nav a:hover {
@@ -54,7 +57,22 @@
       text-align: center;
       color: #ff5e78;
       font-size: 2.2em;
+      margin-bottom: 10px;
+    }
+
+    .menu-intro {
+      text-align: center;
       margin-bottom: 30px;
+      font-size: 1.05em;
+    }
+
+    .notice-box {
+      background-color: #ffe4ee;
+      padding: 18px;
+      border-radius: 12px;
+      margin-bottom: 35px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      line-height: 1.6;
     }
 
     .menu-section {
@@ -65,26 +83,37 @@
       color: #d94e63;
       border-bottom: 2px solid #ffd6a5;
       padding-bottom: 6px;
+      margin-bottom: 15px;
     }
 
     .menu-item {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 0;
+      padding: 12px 0;
       border-bottom: 1px dashed #f3c3c3;
     }
 
     .item-name {
       font-weight: bold;
+      margin: 0;
+    }
+
+    .item-description {
+      font-size: 0.95em;
+      margin-top: 4px;
+      color: #7b4c4c;
     }
 
     .item-price {
       color: #7b4c4c;
       font-style: italic;
+      margin-left: 15px;
+      white-space: nowrap;
     }
 
     @media (max-width: 600px) {
+
       h1 {
         font-size: 1.7em;
       }
@@ -98,12 +127,23 @@
         flex-direction: column;
         align-items: flex-start;
       }
+
+      .item-price {
+        margin-left: 0;
+        margin-top: 6px;
+      }
+
     }
+
   </style>
 </head>
+
 <body>
+
   <header>
+
     <h2>Pastel Pastries</h2>
+
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About Us</a>
@@ -113,98 +153,139 @@
       <a href="menu.html">Menu</a>
       <a href="contact.html">Contact Us</a>
     </nav>
+
   </header>
 
   <main>
-    <h1>Our Delicious Menu</h1>
+
+    <h1>Menu</h1>
+
+    <div class="menu-intro">
+      Homemade desserts baked fresh to order.
+    </div>
+
+    <div class="notice-box">
+
+      <p>
+        🍪 Any cookie flavor can be made jumbo size for an extra $4.
+      </p>
+
+      <p>
+        🎂 We also take custom orders, including cakes and themed desserts.
+        Prices vary depending on size and design.
+      </p>
+
+    </div>
+
+    <!-- CUPCAKES -->
 
     <div class="menu-section">
+
       <h2>Cupcakes</h2>
+
       <div class="menu-item">
-        <p class="item-name">Eggless Vanilla Cupcakes (Set of 12)</p>
-        <p class="item-price">$35.00</p>
+        <div>
+          <p class="item-name">Eggless Vanilla Cupcakes (12)</p>
+        </div>
+        <p class="item-price">$35</p>
       </div>
+
       <div class="menu-item">
-        <p class="item-name">Eggless Chocolate Cupcakes (Set of 12)</p>
-        <p class="item-price">$35.00</p>
+        <div>
+          <p class="item-name">Eggless Chocolate Cupcakes (12)</p>
+        </div>
+        <p class="item-price">$35</p>
       </div>
+
       <div class="menu-item">
-        <p class="item-name">Vanilla Cupcakes (Set of 12)</p>
-        <p class="item-price">$30.00</p>
+        <div>
+          <p class="item-name">Vanilla Cupcakes (12)</p>
+        </div>
+        <p class="item-price">$30</p>
       </div>
+
       <div class="menu-item">
-        <p class="item-name">Chocolate Cupcakes (Set of 12)</p>
-        <p class="item-price">$30.00</p>
+        <div>
+          <p class="item-name">Chocolate Cupcakes (12)</p>
+        </div>
+        <p class="item-price">$30</p>
       </div>
+
     </div>
 
+    <!-- COOKIES -->
+
     <div class="menu-section">
+
       <h2>Cookies</h2>
+
       <div class="menu-item">
-        <p class="item-name">Lemon Cookies (6-pack)</p>
-        <p class="item-price">$15.00</p>
+        <div>
+          <p class="item-name">Lemon Cookies (6-pack)</p>
+        </div>
+        <p class="item-price">$15</p>
       </div>
+
       <div class="menu-item">
-        <p class="item-name"> Eggless Chocolate Chip Cookies(6-pack)</p>
-        <p class="item-price">$16.00</p>
+        <div>
+          <p class="item-name">Eggless Chocolate Chip Cookies (6-pack)</p>
+        </div>
+        <p class="item-price">$16</p>
       </div>
-       <div class="menu-item">
-        <p class="item-name">Chocolate Chip Cookies(6-pack)</p>
-        <p class="item-price">$15.00</p>
+
+      <div class="menu-item">
+        <div>
+          <p class="item-name">Chocolate Chip Cookies (6-pack)</p>
+        </div>
+        <p class="item-price">$15</p>
       </div>
-       <div class="menu-item">
-        <p class="item-name">Eggless White Chocolate Chip Chocolate Cookies(6-pack)</p>
-        <p class="item-price">$16.00</p>
+
+      <div class="menu-item">
+        <div>
+          <p class="item-name">Eggless White Chocolate Chocolate Chip Cookies (6-pack)</p>
+        </div>
+        <p class="item-price">$16</p>
       </div>
+
     </div>
 
-    <div class="menu-section">
-      <h2>Cakes</h2>
-      <div class="menu-item">
-        <p class="item-name">Vanilla Cake (Price may change based on wanted size)</p>
-        <p class="item-price">$20.00-$50.00</p>
-      </div>
-      <div class="menu-item">
-        <p class="item-name">Chcoclate Cake (Price may change based on wanted size)</p>
-        <p class="item-price">$20.00-$50.00</p>
-      </div>
-       <div class="menu-item">
-        <p class="item-name">Eggless Chocolate Cake (Price may change based on wanted size)</p>
-        <p class="item-price">$25.00-$60.00</p>
-      </div>
-      <div class="menu-item">
-        <p class="item-name">Eggless Vanilla Cake (Price may change based on wanted size)</p>
-        <p class="item-price">$25.00-$60.00</p>
-      </div>
-    </div>
+    <!-- OTHER TREATS -->
 
     <div class="menu-section">
+
       <h2>Other Treats</h2>
+
       <div class="menu-item">
-        <p class="item-name">Eggless Brownies(Set of 6)</p>
-        <p class="item-price">$18.00</p>
+        <div>
+          <p class="item-name">Eggless Brownies (6)</p>
+        </div>
+        <p class="item-price">$18</p>
       </div>
+
       <div class="menu-item">
-        <p class="item-name">Brownies (Set of 6) </p>
-        <p class="item-price">$17.00</p>
+        <div>
+          <p class="item-name">Brownies (6)</p>
+        </div>
+        <p class="item-price">$17</p>
       </div>
-        <div class="menu-item">
-        <p class="item-name"> Vanilla Cake-pops (Set of 6)</p>
-        <p class="item-price">$20.00</p>
-      </div>
-        <div class="menu-item">
-        <p class="item-name"> Chocolate Cake-pops (Set of 6) </p>
-        <p class="item-price">$20.00</p>
-      </div>  
+
       <div class="menu-item">
-        <p class="item-name">Eggless Blueberry Bread (Whole Loaf) </p>
-        <p class="item-price">$17.00</p>
+        <div>
+          <p class="item-name">Eggless Blueberry Bread (Whole Loaf)</p>
+        </div>
+        <p class="item-price">$17</p>
       </div>
+
       <div class="menu-item">
-        <p class="item-name">Eggless Banana Bread (Set of 6)</p>
-        <p class="item-price">$17.00</p>
+        <div>
+          <p class="item-name">Eggless Banana Bread (Whole Loaf)</p>
+        </div>
+        <p class="item-price">$17</p>
       </div>
+
     </div>
+
   </main>
+
 </body>
 </html>
