@@ -3,72 +3,179 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Us | Pastel Pastries</title>
+  <title>Contact Us – Pastel Pastries</title>
+
   <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f0faef;
+      background-color: #fff1f7;
       margin: 0;
       padding: 0;
-      color: #2f4f2f;
+      color: #4a2c2a;
     }
+
     header {
-      background-color: #a8dab5;
+      background-color: #ffc8dd;
       padding: 20px;
       text-align: center;
     }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
     nav a {
-      margin: 0 15px;
+      margin: 5px 10px;
       text-decoration: none;
       color: white;
       font-weight: bold;
+      background-color: #ff5e78;
+      padding: 8px 12px;
+      border-radius: 8px;
+      transition: 0.2s;
     }
+
     nav a:hover {
-      text-decoration: underline;
+      background-color: #e64e68;
     }
+
     main {
-      padding: 40px;
-      max-width: 600px;
+      padding: 30px 20px;
+      max-width: 850px;
       margin: auto;
-      background-color: #ffffff;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-      border-radius: 12px;
     }
+
     h1 {
-      color: #5a9c75;
+      text-align: center;
+      color: #ff5e78;
+      font-size: 2.2em;
+      margin-bottom: 10px;
     }
-    p {
-      font-size: 1.1em;
+
+    .intro {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 1.05em;
     }
-    a.contact-link {
-      color: #5a9c75;
+
+    .contact-box {
+      background-color: #ffe4ee;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      line-height: 1.8;
+    }
+
+    .contact-item {
+      margin-bottom: 20px;
+    }
+
+    .label {
       font-weight: bold;
+      color: #d94e63;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    a {
+      color: #4a2c2a;
       text-decoration: none;
     }
-    a.contact-link:hover {
+
+    a:hover {
       text-decoration: underline;
     }
+
+    .note {
+      margin-top: 25px;
+      font-size: 0.95em;
+      color: #7b4c4c;
+    }
+
+    @media (max-width: 600px) {
+
+      h1 {
+        font-size: 1.7em;
+      }
+
+      nav a {
+        font-size: 0.9em;
+        padding: 6px 10px;
+      }
+
+      .contact-box {
+        padding: 20px;
+      }
+
+    }
+
   </style>
 </head>
+
 <body>
+
   <header>
+
     <h2>Pastel Pastries</h2>
+
     <nav>
-      <a href="index.html" class="btn">Home</a>    
-      <a href="about.html" class="btn">About Us</a>       
-      <a href="events.html" class="btn">Events</a>    
-      <a href="impact.html" class="btn">Impact</a>    
-      <a href="gallery.html" class="btn">Photo Gallery!</a>    
-      <a href="menu.html" class="btn">Menu</a>
-      <a href="contact.html" class="btn">Contact Us</a>    
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="events.html">Events</a>
+      <a href="impact.html">Impact</a>
+      <a href="gallery.html">Photo Gallery!</a>
+      <a href="menu.html">Menu</a>
+      <a href="contact.html">Contact Us</a>
     </nav>
+
   </header>
 
   <main>
+
     <h1>Contact Us</h1>
-    <p>We'd love to hear from you! Whether you’re interested in our options, placing an order, or learning more about our cause, feel free to reach out.</p>
-    <p><strong>Email:</strong> <a class="contact-link" href="mailto:pastel.pastries.baked.goods@gmail.com">pastel.pastries.baked.goods@gmail.com</a></p>
-    <p><strong>Phone:</strong> <a class="contact-link" href="tel:‪8045519961‬">(804) 551-9961</a></p>
+
+    <div class="intro">
+      Questions, custom orders, or event inquiries? We'd love to hear from you!
+    </div>
+
+    <div class="contact-box">
+
+      <div class="contact-item">
+        <span class="label">📧 Email</span>
+        <a href="mailto:pastel.pastries.baked.goods@gmail.com">
+          pastel.pastries.baked.goods@gmail.com
+        </a>
+      </div>
+
+      <div class="contact-item">
+        <span class="label">📱 Instagram</span>
+        <a href="https://instagram.com/pastel.pastries.baked.goods" target="_blank">
+          @pastel.pastries.baked.goods
+        </a>
+      </div>
+
+      <div class="contact-item">
+        <span class="label">📞 Phone Number</span>
+        <a href="tel:18045519961">
+          (804) 551-9961
+        </a>
+      </div>
+
+      <div class="note">
+        Please allow 1–2 days for responses, especially during busy weeks or events 💕
+      </div>
+
+    </div>
+
   </main>
+
 </body>
 </html>
