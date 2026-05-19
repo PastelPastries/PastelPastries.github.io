@@ -79,6 +79,42 @@
       font-size: 1.05em;
     }
 
+    /* --- NEW TEAM PHOTO SECTION --- */
+
+    .team-heading {
+      text-align: center;
+      color: #ff5e78;
+      margin-top: 40px;
+      margin-bottom: 15px;
+      font-size: 1.8em;
+    }
+
+    .team-photos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .team-photo-card {
+      background-color: #ffe4ee;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
+    }
+
+    .team-photo-card:hover {
+      transform: scale(1.05);
+    }
+
+    .team-photo-card img {
+      width: 100%;
+      border-radius: 10px;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+    }
+
     @media (max-width: 600px) {
       h1 {
         font-size: 1.7em;
@@ -127,6 +163,27 @@
       <div class="signature">
         With love,<br>
         The Pastel Pastries Team
+      </div>
+
+      <!-- NEW TEAM PHOTO SECTION -->
+      <h2 class="team-heading">Our Team</h2>
+
+      <div class="team-photos">
+        <div class="team-photo-card">
+          <img src="shadow.jpeg" alt="Pastel Pastries Team Photo 1">
+        </div>
+
+        <div class="team-photo-card">
+          <img src="members.jpeg" alt="Pastel Pastries Team Photo 2">
+        </div>
+
+        <div class="team-photo-card">
+          <img src="main.jpeg" alt="Pastel Pastries Team Photo 3">
+        </div>
+
+        <div class="team-photo-card">
+          <img src="image5.jpeg" alt="Pastel Pastries Team Photo 4">
+        </div>
       </div>
 
     </div>
